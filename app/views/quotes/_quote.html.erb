@@ -1,12 +1,12 @@
-<div class="quote">
+<div class="quote bg-slate-200 p-4 my-1 rounded-md">
   <%= link_to quote.name, quote_path(quote) %>
-  <div class="quote__actions">
+  <div class="quote__actions flex">
+    <%= link_to "Edit",
+                edit_quote_path(quote),
+                class: "bg-sky-500 mt-3 mr-3 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded" %>
     <%= button_to "Delete",
                   quote_path(quote),
                   method: :delete,
-                  class: "btn btn--light" %>
-    <%= link_to "Edit",
-                edit_quote_path(quote),
-                class: "btn btn--light" %>
+                  class: "bg-rose-500 mt-3 mr-3 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded" %>
   </div>
 </div>
