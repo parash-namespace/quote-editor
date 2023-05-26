@@ -73,3 +73,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "simple_form", "~> 5.1.0"
+gem 'ffaker', '~> 2.21'
