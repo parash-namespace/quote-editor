@@ -4,6 +4,8 @@
     <%= link_to sanitize("&larr; Back to quotes"), quotes_path,
                 class: "bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded float-right h-10 ml-auto my-auto" %>
   </div>
-  
-  <%= render "form", quote: @quote %>
+
+  <%= turbo_frame_tag @quote do %>
+    <%= render "form", quote: @quote %>
+  <% end %>
 </main>
