@@ -11,6 +11,12 @@ Company.create([
   {name: 'PwC'}
 ])
 
+User::create([
+  {email: 'accountant@kpmg.com', password: 'password', password_confirmation: 'password', company: Company.first},
+  {email: 'manager@kpmg.com', password: 'password', password_confirmation: 'password', company: Company.first},
+  {email: 'eavesdropper@pwc.com', password: 'password', password_confirmation: 'password', company: Company.last},
+])
+
 (1..10).each do
-  Quote::create(name: FFaker::BaconIpsum::paragraph)
+  Quote::create(name: FFaker::BaconIpsum::paragraph, company: Company.first)
 end
